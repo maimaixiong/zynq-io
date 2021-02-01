@@ -1,26 +1,4 @@
 ####################################################################################################
-# Copyright (c) 2018 Braiins Systems s.r.o.
-#
-# Permission is hereby granted, free of charge, to any person obtaining a copy
-# of this software and associated documentation files (the "Software"), to deal
-# in the Software without restriction, including without limitation the rights
-# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-# copies of the Software, and to permit persons to whom the Software is
-# furnished to do so, subject to the following conditions:
-#
-# The above copyright notice and this permission notice shall be included in all
-# copies or substantial portions of the Software.
-#
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-# SOFTWARE.
-####################################################################################################
-
-####################################################################################################
 # CHECK INPUT ARGUMENTS
 ####################################################################################################
 # check number of arguments
@@ -32,14 +10,14 @@ if {$argc == 1} {
 	exit 1
 }
 
-# check name of the board
-if {$board == "G9"} {
+# check name of the board ALINX 7020
+if {$board == "A9"} {
 	set vid_width 1
-} elseif {$board == "G19"} {
+} elseif {$board == "A19"} {
 	set vid_width 6
 } else {
 	puts "Unknown board: $board"
-	puts "Only supported boards are G9 and G19!"
+	puts "Only supported boards are A9 and A19!"
 	exit 1
 }
 
@@ -52,7 +30,8 @@ puts "Board name: $board"
 set design "system"
 
 # Device name
-set partname "xc7z010clg400-1"
+set partname "xc7z020clg400-2"
+
 
 # define number of parallel jobs
 set jobs 2
